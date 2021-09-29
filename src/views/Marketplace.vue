@@ -61,7 +61,7 @@ export default {
   },
   mounted(){
     axios
-    .get("http://localhost:5000/productSerach")
+    .get("http://localhost:5500/productSerach") // Change uri before demo 
     .then(response => (this.imageList = response.data))
   },
     
@@ -70,7 +70,7 @@ export default {
         let formData = new FormData();
         formData.append('file', this.file); // append image file name as file in variable formData
 
-        axios.post('http://localhost:5000/single-file', 
+        axios.post('http://localhost:5500/single-file',  // Change uri before demo 
         formData,
           {
           headers: {'Content-Type': 'multipart/form-data'}
