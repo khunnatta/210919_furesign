@@ -14,8 +14,16 @@
         <div class="serach-button">
           <button v-if="file !=''" v-on:click="submitFile">Serach</button>
         </div>
-        {{ imageList }}
+        
       </div>
+    </section>
+    <section v-if="file != null">
+      <ul>
+        <li v-for="element in imageList" >
+          {{ element }}
+        </li>
+
+      </ul>
     </section>
   </div>
 </template>

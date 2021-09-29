@@ -39,7 +39,7 @@ ul {
 
 li, .link-to-page {
     display: inline-block;
-    color: #fff;
+    color:  #DEBAAA;
     font-size: min(3vw, 30px);
     font-weight: bold;
     margin-left: 0.4rem;
@@ -47,6 +47,11 @@ li, .link-to-page {
     margin-bottom: 0px;
     cursor: pointer;
 }
+
+li, .link-to-page:hover {
+    color: #a26854;
+}
+
 
 li:hover {
     color: #2c3e50;
