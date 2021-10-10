@@ -56,6 +56,8 @@ export default {
       isLoading: false,
       link: '#',
       file: "",
+      // element: null
+      // showProduct: null
 
     }
   },
@@ -80,7 +82,12 @@ export default {
 
       handleFileUpload(){
         this.file = this.$refs.file.files[0];
-        console.log(this.file['name'])
+        // console.log(this.file['name']);
+      },
+
+      replyProduct(){
+        axios.get('http://localhost:6060:/resultproduct')
+        .then(res => (this.imageList = res));
       }
 
     }
