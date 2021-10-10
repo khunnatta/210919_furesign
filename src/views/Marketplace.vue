@@ -89,7 +89,6 @@ export default {
         axios.get('http://localhost:6060:/resultproduct')
         .then(res => (this.imageList = res));
       }
-
     }
 }
 </script>
