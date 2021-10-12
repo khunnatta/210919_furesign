@@ -12,6 +12,7 @@
     <div class="router">
       <router-link to="/">HOME</router-link>
       <router-link to="/marketplace">MARKETPLACE</router-link>
+      <router-link to="/result">Result</router-link>
     </div>
   </div>
 
