@@ -12,17 +12,19 @@
           <input  type="file" id="file"  ref="file" v-on:change="handleFileUpload" >
         </div>
         <div class="serach-button">
-          <button v-if="file !=''" v-on:click="submitFile">Serach</button>
+          <button v-if="file !=''" v-on:click="submitFile">Submit</button>
         </div>
         
       </div>
     </section>
     <section v-if="file != null">
+      <div class="serach-button">
+        <button  v-on:click="handlereply">Serach</button>
+       </div>
       <ul>
         <li v-for="element in imageList" >
           {{ element }}
         </li>
-
       </ul>
     </section>
   </div>
@@ -33,6 +35,8 @@ import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 import axios from 'axios';
 // import '../assets/js/cameraSet.js';
+
+
 
 export default {
   name: 'Marketplace',
@@ -47,7 +51,7 @@ export default {
       options: 
       {
         rewind : true,
-        width  : 800,
+        width  : 800, 
         gap    : '1rem',
       },
       isCameraOpen: false,
@@ -61,11 +65,7 @@ export default {
 
     }
   },
-  mounted(){
-    axios
-    .get("http://localhost:5500/productSerach") // Change uri before demo 
-    .then(response => (this.imageList = response.data))
-  },
+
     
     methods: {
       submitFile(){
@@ -84,11 +84,28 @@ export default {
         this.file = this.$refs.file.files[0];
         // console.log(this.file['name']);
       },
-
-      replyProduct(){
-        axios.get('http://localhost:6060:/resultproduct')
-        .then(res => (this.imageList = res));
-      }
+      handlereply(){
+        axios
+        .get("http://localhost:5500/reply_product") // Change uri before demo 
+        .then(response => {
+          (this.imageList = response.data)
+          if(this.imageList === null)
+          {
+            (this.imageList = {'data':'No serach images'});
+            console.log(response.data);
+            console.log('++++ api cors success ++++');
+          }
+          else if(this.imageList !== null)
+          {
+            console.log(response.data);
+            console.log('++++ api cors success !== ++++');
+          }
+          }).catch(err=>{
+            console.log('++++ api cors error ++++');
+            console.log('error log -->', err.message);
+            })
+ 
+  },
     }
 }
 </script>
