@@ -1,64 +1,170 @@
 <template>
-  <div class="container">
-    <img
-      src="https://images.unsplash.com/photo-1549589237-9e70b6be4da8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=925&q=80"
-      alt="Pancake"
-    />
-    <div class="container__text">
-      <h1>ชื่อสินค้า</h1>
-      <div class="container__text__star">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
+  <div class="resultList">
+    <div class="container">
+      <img src="../assets/item0.jpeg" alt="item0" />
+      <div class="container__text">
+        <h1 style="margin-top: 10px">ชื่อสินค้า</h1>
+        <h1>ชื่อร้านค้า</h1>
+        <h1>ราคา</h1>
+        <div class="container__text__star">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star unchecked"></span>
+        </div>
+        <hr />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
+          voluptates voluptatem unde qui debitis obcaecati dolorum, libero
+          dolorem officia quo accusamus sunt possimus quos reiciendis. Quo eum
+          laboriosam deleniti totam.
+        </p>
+        <button class="btn">
+          Go Shopping <i class="fa fa-arrow-right"></i>
+        </button>
       </div>
-      <p>
-        If you're fan of caramel cake, then you'll love our Caramel Cake
-        Pancakes. We Complete these over-the-top pancakes with Caramel Syrup.
-      </p>
-      <div class="container__text__timing">
-        <div class="container__text__timing_time">
-          <h2>Hands-on Time</h2>
-          <p>30 min</p>
+    </div>
+    <div class="container">
+      <img src="../assets/item0.jpeg" alt="item0" />
+      <div class="container__text">
+        <h1 style="margin-top: 10px">ชื่อสินค้า</h1>
+        <h1>ชื่อร้านค้า</h1>
+        <h1>ราคา</h1>
+        <div class="container__text__star">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star unchecked"></span>
         </div>
-        <div class="container__text__timing_time">
-          <h2>Total Time</h2>
-          <p>40 min</p>
-        </div>
-        <div class="container__text__timing_time">
-          <h2>Yield</h2>
-          <p>40 min</p>
-        </div>
+        <hr />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
+          voluptates voluptatem unde qui debitis obcaecati dolorum, libero
+          dolorem officia quo accusamus sunt possimus quos reiciendis. Quo eum
+          laboriosam deleniti totam.
+        </p>
+        <button class="btn">
+          Go Shopping <i class="fa fa-arrow-right"></i>
+        </button>
       </div>
-      <button class="btn">view recipe <i class="fa fa-arrow-right"></i></button>
+    </div>
+    <div class="container">
+      <img src="../assets/item0.jpeg" alt="item0" />
+      <div class="container__text">
+        <h1 style="margin-top: 10px">ชื่อสินค้า</h1>
+        <h1>ชื่อร้านค้า</h1>
+        <h1>ราคา</h1>
+        <div class="container__text__star">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star unchecked"></span>
+        </div>
+        <hr />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
+          voluptates voluptatem unde qui debitis obcaecati dolorum, libero
+          dolorem officia quo accusamus sunt possimus quos reiciendis. Quo eum
+          laboriosam deleniti totam.
+        </p>
+        <button class="btn">
+          Go Shopping <i class="fa fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <img src="../assets/item0.jpeg" alt="item0" />
+      <div class="container__text">
+        <h1 style="margin-top: 10px">ชื่อสินค้า</h1>
+        <h1>ชื่อร้านค้า</h1>
+        <h1>ราคา</h1>
+        <div class="container__text__star">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star unchecked"></span>
+        </div>
+        <hr />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
+          voluptates voluptatem unde qui debitis obcaecati dolorum, libero
+          dolorem officia quo accusamus sunt possimus quos reiciendis. Quo eum
+          laboriosam deleniti totam.
+        </p>
+        <button class="btn">
+          Go Shopping <i class="fa fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <img src="../assets/item0.jpeg" alt="item0" />
+      <div class="container__text">
+        <h1 style="margin-top: 10px">ชื่อสินค้า</h1>
+        <h1>ชื่อร้านค้า</h1>
+        <h1>ราคา</h1>
+        <div class="container__text__star">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star unchecked"></span>
+        </div>
+        <hr />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
+          voluptates voluptatem unde qui debitis obcaecati dolorum, libero
+          dolorem officia quo accusamus sunt possimus quos reiciendis. Quo eum
+          laboriosam deleniti totam.
+        </p>
+        <button class="btn">
+          Go Shopping <i class="fa fa-arrow-right"></i>
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "result",
+};
 </script>
 
 <style scoped>
+.resultList {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  padding-left: 3.5vw;
+  padding-right: 3.5vw;
+  margin: 1vw 1.5vw;
+  font-family: "Prompt", sans-serif;
+}
+
 .container {
   background-color: whitesmoke;
-  position: relative;
   display: grid;
-  grid-template-columns: 300px 600px;
+  grid-template-columns: min(20vw, 350px) auto 10vw;
   border-radius: 5px;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.356);
+  margin-bottom: 2.5vh;
 }
 img {
-  width: 300px;
-  height: 300px;
+  width: min(17.5vw, 320px);
+  height: min(17.5vw, 320px);
   border-radius: 5px 0 0 5px;
 }
 
 .btn {
   position: absolute;
-  bottom: -20px;
-  right: -20px;
+  bottom: -30px;
+  right: 30px;
   border: none;
   outline: none;
   display: flex;
@@ -79,17 +185,22 @@ img {
 }
 
 .container__text {
-  padding: 40px 40px 0;
+  padding: 0px 0px 0;
+  text-align: left;
+  margin-left: 5px;
 }
 .container__text h1 {
   color: #351897;
   font-weight: 400;
+  margin: 0 0 0 0;
+  font-size: max(1.5vw, 12px);
+  color: #a26854;
 }
 
 .container__text__star span {
   font-size: 0.8rem;
   color: #ffa800;
-  margin: -5px 0 20px;
+  margin: -5px 0 5px;
 }
 
 p {
@@ -106,13 +217,12 @@ p {
 h2 {
   margin-bottom: 5px;
   font-size: 1rem;
-  font-weight: 400;
   color: #818189;
 }
 p {
-  color: #351897;
-  font-weight: bold;
-  font-size: 1.2rem;
+  color: rgb(127, 127, 127);
+  font-size: max(1.25vw, 10px);
+  margin: 2.5px 0 0 0;
 }
-</style>>
+</style>
 
