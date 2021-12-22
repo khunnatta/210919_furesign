@@ -7,25 +7,22 @@
         <div class="upload-btn-wrapper">
           <h4 v-if="file !=''">Your file upload</h4>
           <p v-if="file !=''" >{{ this.file['name'] }}</p>
-          <button v-if="file !=''" class="btn">Re-upload</button>
+          <button v-if="file !=''" class="btn" @click="onReupload">Re-upload</button>
           <button v-if="file ===''" class="btn">Upload image</button>
-          <input  type="file" id="file"  ref="file" v-on:change="handleFileUpload" >
+          <input type="file" id="file"  ref="file" v-on:change="handleFileUpload" >
         </div>
         <div class="serach-button">
           <button v-if="file !=''" v-on:click="submitFile">Submit</button>
         </div>
-        
       </div>
     </section>
-    <section v-if="file != null">
-      <div class="serach-button">
-        <button  v-on:click="handlereply">Serach</button>
-       </div>
-      <ul>
-        <li v-for="element in imageList" >
-          {{ element }}
-        </li>
-      </ul>
+    <section v-if="isLoading !== false">
+      <div v-if="replyData === ''">
+        <h2>loading...</h2>
+      </div>
+      <div v-if="replyData !== ''">
+        Hello world
+      </div>
     </section>
   </div>
 </template>
@@ -60,6 +57,7 @@ export default {
       isLoading: false,
       link: '#',
       file: "",
+      replyData: ""
       // element: null
       // showProduct: null
 
@@ -70,42 +68,33 @@ export default {
     methods: {
       submitFile(){
         let formData = new FormData();
+        this.isLoading = true; 
+
+        // console.log(this.file)
         formData.append('file', this.file); // append image file name as file in variable formData
 
-        axios.post('http://localhost:5500/single-file',  // Change uri before demo 
+        axios.post('http://localhost:6060/sendingmodel',  // Change uri before demo 
         formData,
           {
           headers: {'Content-Type': 'multipart/form-data'}
           }
-        )
+        ).then(res =>{
+          this.replyData = res.data;
+          console.log(this.replyData)
+        })
+        .catch(err => {
+          console.log(err)
+        })
       },
 
       handleFileUpload(){
         this.file = this.$refs.file.files[0];
         // console.log(this.file['name']);
       },
-      handlereply(){
-        axios
-        .get("http://localhost:5500/reply_product") // Change uri before demo 
-        .then(response => {
-          (this.imageList = response.data)
-          if(this.imageList === null)
-          {
-            (this.imageList = {'data':'No serach images'});
-            console.log(response.data);
-            console.log('++++ api cors success ++++');
-          }
-          else if(this.imageList !== null)
-          {
-            console.log(response.data);
-            console.log('++++ api cors success !== ++++');
-          }
-          }).catch(err=>{
-            console.log('++++ api cors error ++++');
-            console.log('error log -->', err.message);
-            })
- 
-  },
+      onReupload(){
+        this.isLoading = false;
+        this.replyData = ""
+      }
     }
 }
 </script>
